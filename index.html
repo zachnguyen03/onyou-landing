@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onyou Bridal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="./assets/OY.png">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <div class="logo"><a href="/"><img src="./assets/OY.png" alt="Onyou Bridal Logo"></a></div>
+      <!-- <div class="header-subtitle">by nanapham</div> -->
+    </div>
+    <div class="header-right">
+      <nav class="main-nav">
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+  <section class="hero">
+    <video class="hero-video" autoplay loop muted playsinline poster="fallback.jpg">
+      <source src="./assets/wed.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <!-- <div class="hero-content">
+      <h1>Find Your Dream Dress</h1>
+      <p>Discover exclusive bridal gowns and unforgettable experiences at Onyou Bridal.</p>
+      <a href="#showcase"><button class="cta-btn">View Collection</button></a> -->
+    <!-- </div> -->
+  </section>
+  <section class="collection-showcase" id="portfolio">
+    <h2>Featured Collections</h2>
+    <div class="collection-nav-wrapper">
+      <button class="collection-arrow left" aria-label="Scroll left">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L10 14L18 22" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="collection-scroll">
+        <a href="#" class="collection-card">
+          <img src="./assets/wed1.jpg" alt="Boho Chic Wedding Dress">
+          <div class="collection-overlay">
+            <span class="collection-title">Boho Chic</span>
+          </div>
+        </a>
+        <a href="#" class="collection-card">
+          <img src="./assets/wed2.jpg" alt="Elegant Lace Wedding Dress">
+          <div class="collection-overlay">
+            <span class="collection-title">Elegant Lace</span>
+          </div>
+        </a>
+        <a href="#" class="collection-card">
+          <img src="./assets/wed3.jpg" alt="Classic Satin Wedding Dress">
+          <div class="collection-overlay">
+            <span class="collection-title">Classic Satin</span>
+          </div>
+        </a>
+        <a href="#" class="collection-card">
+          <img src="./assets/wed4.jpg" alt="Modern Minimalist Wedding Dress">
+          <div class="collection-overlay">
+            <span class="collection-title">Modern Minimalist</span>
+          </div>
+        </a>
+        <a href="#" class="collection-card">
+          <img src="./assets/wed5.jpg" alt="Timeless Elegance Wedding Dress">
+          <div class="collection-overlay">
+            <span class="collection-title">Timeless Elegance</span>
+          </div>
+        </a>
+        <a href="#" class="collection-card">
+          <img src="./assets/wed1.jpg" alt="Romantic Tulle Wedding Dress">
+          <div class="collection-overlay">
+            <span class="collection-title">Romantic Tulle</span>
+          </div>
+        </a>
+      </div>
+      <button class="collection-arrow right" aria-label="Scroll right">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 6L18 14L10 22" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </section>
+    
+    <!-- Dress Detail Modal -->
+    <div class="dress-modal" id="dressModal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body">
+          <div class="modal-image">
+            <img id="modalImage" src="" alt="">
+          </div>
+          <div class="modal-info">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <div class="modal-tags" id="modalTags"></div>
+            <div class="modal-actions">
+              <button class="btn-primary">Book Appointment</button>
+              <button class="btn-secondary">Add to Favorites</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about" id="about">
+    <h2>Why Choose Onyou Bridal?</h2>
+    <p>At Onyou Bridal, we believe every bride deserves a dress as unique as her love story. Our curated collection, personalized service, and passion for style ensure you'll find the gown of your dreams.</p>
+    <div class="about-icons">
+      <div class="icon-blurb">
+        <span>💍</span>
+        <p>Exclusive Designs</p>
+      </div>
+      <div class="icon-blurb">
+        <span>🤍</span>
+        <p>Personalized Service</p>
+      </div>
+      <div class="icon-blurb">
+        <span>✨</span>
+        <p>Unforgettable Experience</p>
+      </div>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form" autocomplete="off" netlify onsubmit="event.preventDefault(); alert('Thank you for contacting Onyou Bridal! We will get back to you soon.'); this.reset();">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#showcase">Wedding Dresses</a></li>
+          <li><a href="#">Bridesmaid Dresses</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Veils</a></li>
+          <li><a href="#">Sale</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Customer Service</h4>
+        <ul>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#">Book Appointment</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Order Status</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-col social-col">
+        <h4>Follow Us</h4>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><span class="footer-icon">&#x1F47D;</span></a>
+          <a href="#" aria-label="Facebook"><span class="footer-icon">&#x1F426;</span></a>
+          <a href="#" aria-label="Pinterest"><span class="footer-icon">&#x1F4D1;</span></a>
+          <a href="#" aria-label="TikTok"><span class="footer-icon">&#x1F3A4;</span></a>
+        </div>
+      </div>
+      <div class="footer-col newsletter-col">
+        <h4>Newsletter</h4>
+        <form class="footer-newsletter" onsubmit="event.preventDefault(); alert('Thank you for subscribing!'); this.reset();">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="newsletter-note">Get exclusive offers & bridal inspiration</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Accessibility</a>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2024 Onyou Bridal. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Dress card interaction functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const dressCards = document.querySelectorAll('.dress-card');
+      const modal = document.getElementById('dressModal');
+      const closeModal = document.querySelector('.close-modal');
+      const modalImage = document.getElementById('modalImage');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalDescription = document.getElementById('modalDescription');
+      const modalTags = document.getElementById('modalTags');
+
+      // Dress data for modal
+      const dressData = {
+        'elegant-lace': {
+          title: 'Elegant Lace Gown',
+          description: 'A timeless masterpiece featuring intricate lace detailing that creates a romantic and sophisticated silhouette. Perfect for the bride who appreciates classic elegance with modern comfort.',
+          image: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80',
+          tags: ['Lace', 'A-Line', 'Classic', 'Romantic']
+        },
+        'classic-satin': {
+          title: 'Classic Satin Dress',
+          description: 'Sophisticated elegance meets luxurious comfort in this stunning satin creation. The smooth, flowing fabric drapes beautifully, creating a figure-flattering silhouette that exudes confidence.',
+          image: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80',
+          tags: ['Satin', 'Mermaid', 'Elegant', 'Sophisticated']
+        },
+        'modern-minimalist': {
+          title: 'Modern Minimalist',
+          description: 'Clean lines and contemporary sophistication define this minimalist masterpiece. Perfect for the modern bride who values simplicity and understated elegance.',
+          image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
+          tags: ['Crepe', 'Sheath', 'Modern', 'Minimalist']
+        },
+        'boho-chic': {
+          title: 'Boho Chic',
+          description: 'Free-spirited romance meets ethereal beauty in this bohemian-inspired gown. Layers of soft tulle create movement and grace, perfect for the adventurous bride.',
+          image: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80',
+          tags: ['Tulle', 'Boho', 'Romantic', 'Free-spirited']
+        },
+        'timeless-elegance': {
+          title: 'Timeless Elegance',
+          description: 'Graceful beauty that never goes out of style. This classic ball gown silhouette features luxurious silk fabric and timeless design elements.',
+          image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80',
+          tags: ['Silk', 'Ball Gown', 'Timeless', 'Graceful']
+        },
+        'romantic-tulle': {
+          title: 'Romantic Tulle',
+          description: 'Dreamy layers of soft, flowing tulle create a fairytale-worthy silhouette. This romantic gown is perfect for the bride who dreams of a magical wedding day.',
+          image: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80',
+          tags: ['Tulle', 'Princess', 'Romantic', 'Fairytale']
+        }
+      };
+
+      // Add click event to each dress card
+      dressCards.forEach(card => {
+        card.addEventListener('click', function() {
+          const dressId = this.getAttribute('data-dress');
+          const dress = dressData[dressId];
+          
+          if (dress) {
+            // Update modal content
+            modalImage.src = dress.image;
+            modalImage.alt = dress.title;
+            modalTitle.textContent = dress.title;
+            modalDescription.textContent = dress.description;
+            
+            // Update tags
+            modalTags.innerHTML = '';
+            dress.tags.forEach(tag => {
+              const tagElement = document.createElement('span');
+              tagElement.className = 'tag';
+              tagElement.textContent = tag;
+              modalTags.appendChild(tagElement);
+            });
+            
+            // Show modal
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+          }
+        });
+
+        // Add selection effect on click
+        card.addEventListener('click', function() {
+          // Remove selected class from all cards
+          dressCards.forEach(c => c.classList.remove('selected'));
+          // Add selected class to clicked card
+          this.classList.add('selected');
+        });
+      });
+
+      // Close modal functionality
+      closeModal.addEventListener('click', function() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      });
+
+      // Close modal when clicking outside
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }
+      });
+
+      // Close modal with Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+          modal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }
+      });
+
+      // Button functionality
+      document.querySelectorAll('.btn-primary').forEach(btn => {
+        btn.addEventListener('click', function() {
+          alert('Thank you for your interest! We will contact you soon to schedule your appointment.');
+        });
+      });
+
+      document.querySelectorAll('.btn-secondary').forEach(btn => {
+        btn.addEventListener('click', function() {
+          this.textContent = 'Added to Favorites!';
+          this.style.background = 'var(--gold)';
+          this.style.color = 'white';
+          setTimeout(() => {
+            this.textContent = 'Add to Favorites';
+            this.style.background = 'transparent';
+            this.style.color = 'var(--gold)';
+          }, 2000);
+        });
+      });
+
+      // Collection showcase arrow navigation
+      const scrollContainer = document.querySelector('.collection-scroll');
+      const leftArrow = document.querySelector('.collection-arrow.left');
+      const rightArrow = document.querySelector('.collection-arrow.right');
+      const scrollAmount = 320; // px per scroll (matches card width)
+
+      if (leftArrow && rightArrow && scrollContainer) {
+        leftArrow.addEventListener('click', function() {
+          scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+        rightArrow.addEventListener('click', function() {
+          scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
+</body>
+</html> 
