@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Onyou Bridal</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="./assets/OY.png">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/png" href="../assets/OY.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
@@ -17,36 +17,36 @@
 <body>
   <header>
     <div class="header-left">
-      <div class="logo"><a href="/"><img src="./assets/OY.png" alt="Onyou Bridal Logo"></a></div>
+      <div class="logo"><a href="../index.html"><img src="../assets/OY.png" alt="Onyou Bridal Logo"></a></div>
       <!-- <div class="header-subtitle">by nanapham</div> -->
     </div>
     <div class="header-right">
       <nav class="main-nav">
-        <a href="pages/about.html">About Us</a>
-        <a href="pages/services.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
         <div class="nav-dropdown">
           <a href="#portfolio" class="dropdown-toggle">Wedding Collection <span class="dropdown-arrow">▼</span></a>
           <div class="dropdown-menu">
-            <a href="#boho-chic">Dress</a>
-            <a href="#elegant-lace">Studio</a>
-            <a href="#classic-satin">Makeup</a>
-            <a href="#modern-minimalist">Hanbok/Ao Dai</a>
+            <a href="wedding-dress.html">Dress</a>
+            <a href="wedding-studio.html">Studio</a>
+            <a href="wedding-makeup.html">Makeup</a>
+            <a href="wedding-aodai.html">Hanbok/Ao Dai</a>
           </div>
         </div>
-        <a href="pages/gallery.html">Gallery</a>
-        <a href="#contact">Contact Us</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact Us</a>
       </nav>
     </div>
   </header>
   <section class="hero-slogan">
       <div class="slogan-container">
-        <h1 class="main-slogan" style="font-family: 'Beau Rivage', cursive; font-weight: 400; font-style: normal;">ONYOU</h1>
+        <h1 class="main-slogan" style="font-family: 'Beau Rivage', cursive; font-weight: 400; font-style: normal;">About Us</h1>
       <p class="slogan-subtitle" style="font-family: 'Parisienne', cursive; font-weight: 400; font-style: normal;">Make your big day your way</p>
     </div>
   </section>
   <section class="hero">
     <div class="hero-slider">
-      <img id="heroSliderImage" src="./assets/wed1.jpg" alt="Showcase Dress" />
+      <img id="heroSliderImage" src="../assets/wed1.jpg" alt="Showcase Dress" />
     </div>
     <!-- <div class="hero-content">
       <h1>Find Your Dream Dress</h1>
@@ -64,37 +64,37 @@
       </button>
       <div class="collection-scroll" id="scroller">
         <div class="collection-card">
-          <img src="./assets/wed1.jpg" alt="Boho Chic Wedding Dress">
+          <img src="../assets/wed1.jpg" alt="Boho Chic Wedding Dress">
           <div class="collection-overlay">
             <span class="collection-title"></span>
           </div>
         </div>
         <div class="collection-card">
-          <img src="./assets/wed2.jpg" alt="Elegant Lace Wedding Dress">
+          <img src="../assets/wed2.jpg" alt="Elegant Lace Wedding Dress">
           <div class="collection-overlay">
             <span class="collection-title"></span>
           </div>
         </div>
         <div class="collection-card">
-          <img src="./assets/wed3.jpg" alt="Classic Satin Wedding Dress">
+          <img src="../assets/wed3.jpg" alt="Classic Satin Wedding Dress">
           <div class="collection-overlay">
             <span class="collection-title"></span>
           </div>
         </div>
         <div class="collection-card">
-          <img src="./assets/wed4.jpg" alt="Modern Minimalist Wedding Dress">
+          <img src="../assets/wed4.jpg" alt="Modern Minimalist Wedding Dress">
           <div class="collection-overlay">
             <span class="collection-title"></span>
           </div>
         </div>
         <div class="collection-card">
-          <img src="./assets/wed5.jpg" alt="Timeless Elegance Wedding Dress">
+          <img src="../assets/wed5.jpg" alt="Timeless Elegance Wedding Dress">
           <div class="collection-overlay">
             <span class="collection-title"></span>
           </div>
         </div>
         <div class="collection-card">
-          <img src="./assets/wed1.jpg" alt="Romantic Tulle Wedding Dress">
+          <img src="../assets/wed1.jpg" alt="Romantic Tulle Wedding Dress">
           <div class="collection-overlay">
             <span class="collection-title"></span>
           </div>
@@ -220,9 +220,9 @@
     document.addEventListener('DOMContentLoaded', function() {
       // Hero slider animation
       const heroImages = [
-        { src: './assets/wed1.jpg', alt: 'Boho Chic Wedding Dress' },
-        { src: './assets/wed2.jpg', alt: 'Elegant Lace Wedding Dress' },
-        { src: './assets/wed3.jpg', alt: 'Classic Satin Wedding Dress' }
+        { src: '../assets/wed1.jpg', alt: 'Boho Chic Wedding Dress' },
+        { src: '../assets/wed2.jpg', alt: 'Elegant Lace Wedding Dress' },
+        { src: '../assets/wed3.jpg', alt: 'Classic Satin Wedding Dress' }
       ];
       const heroSliderImage = document.getElementById('heroSliderImage');
       let heroIndex = 0;
