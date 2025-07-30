@@ -522,6 +522,7 @@ header {
   flex: 1 1 180px;
   max-width: 220px;
   margin: 1rem 0;
+  text-align: center;
 }
 
 .icon-blurb span {
@@ -620,6 +621,39 @@ footer {
   border-bottom: 2px solid var(--gold);
 }
 
+/* Language Switcher Styles */
+.language-switcher {
+  display: flex;
+  gap: 0.3rem;
+  margin-left: 2rem;
+  align-items: center;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Inter', sans-serif;
+  min-width: 32px;
+  text-align: center;
+}
+
+.lang-btn:hover {
+  background: var(--gold);
+  color: white;
+}
+
+.lang-btn.active {
+  background: var(--gold);
+  color: white;
+}
+
 @media (max-width: 900px) {
   body {
     margin-top: 140px; /* Adjust for stacked header layout */
@@ -643,6 +677,13 @@ footer {
     justify-content: center;
     width: 100%;
     margin-top: 0;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .language-switcher {
+    margin-left: 0;
+    margin-top: 0.5rem;
   }
   .main-nav {
     justify-content: center;
@@ -704,7 +745,13 @@ footer {
 @media (max-width: 700px) {
   .about-icons { 
     flex-direction: column; 
-    gap: 1.5rem; 
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .icon-blurb {
+    flex: none;
+    width: auto;
+    max-width: none;
   }
   .hero h1 { 
     font-size: 2.1rem; 
@@ -833,6 +880,8 @@ footer {
   font-family: 'Inter', sans-serif;
   border-top: 1px solid rgba(217,119,6,0.08);
   margin-top: 3rem;
+  content-visibility: auto;
+  contain-intrinsic-size: 400px;
 }
 .footer-container {
   display: flex;

@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap" rel="stylesheet">
+  <script src="../assets/language-switcher.js"></script>
 
 </head>
 <body>
@@ -22,25 +23,30 @@
     </div>
     <div class="header-right">
       <nav class="main-nav">
-        <a href="about.html">About Us</a>
-        <a href="services.html">Services</a>
+        <a href="about.html" data-translate="about-us">About Us</a>
+        <a href="services.html" data-translate="services">Services</a>
         <div class="nav-dropdown">
-          <a href="#portfolio" class="dropdown-toggle">Wedding Collection <span class="dropdown-arrow">▼</span></a>
+          <a href="#portfolio" class="dropdown-toggle" data-translate="wedding-collection">Wedding Collection <span class="dropdown-arrow">▼</span></a>
           <div class="dropdown-menu">
-            <a href="wedding-dress.html">Dress</a>
-            <a href="wedding-studio.html">Studio</a>
-            <a href="wedding-makeup.html">Makeup</a>
-            <a href="wedding-aodai.html">Hanbok/Ao Dai</a>
+            <a href="wedding-dress.html" data-translate="dress">Dress</a>
+            <a href="wedding-studio.html" data-translate="studio">Studio</a>
+            <a href="wedding-makeup.html" data-translate="makeup">Makeup</a>
+            <a href="wedding-aodai.html" data-translate="hanbok-ao-dai">Hanbok/Ao Dai</a>
           </div>
         </div>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="gallery.html" data-translate="gallery">Gallery</a>
+        <a href="contact.html" data-translate="contact-us">Contact Us</a>
       </nav>
+      <div class="language-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="vn">VN</button>
+        <button class="lang-btn" data-lang="kr">KR</button>
+      </div>
     </div>
   </header>
   <section class="hero-slogan">
       <div class="slogan-container">
-        <h1 class="main-slogan" style="font-family: 'Beau Rivage', cursive; font-weight: 400; font-style: normal;">Services</h1>
+        <h1 class="main-slogan" style="font-family: 'Beau Rivage', cursive; font-weight: 400; font-style: normal;">ONYOU</h1>
       <p class="slogan-subtitle" style="font-family: 'Parisienne', cursive; font-weight: 400; font-style: normal;">Make your big day your way</p>
     </div>
   </section>
@@ -421,6 +427,9 @@
         });
       });
     });
+
+    // Initialize language switcher
+    initLanguageSwitcher();
   </script>
 </body>
 </html> 
