@@ -13,37 +13,77 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="./assets/OY.png">
   <script src="./assets/language-switcher.js"></script>
+  <script src="./assets/mobile-nav.js"></script>
 
 </head>
 <body>
   <header>
     <div class="header-left">
       <div class="logo"><a href="/"><img src="./assets/OY.png" alt="Onyou Bridal Logo"></a></div>
-      <!-- <div class="header-subtitle">by nanapham</div> -->
     </div>
-          <div class="header-right">
-        <nav class="main-nav">
-          <a href="pages/about.html" data-translate="about-us">About Us</a>
-          <a href="pages/services.html" data-translate="services">Services</a>
-          <div class="nav-dropdown">
-            <a href="#portfolio" class="dropdown-toggle" data-translate="wedding-collection">Wedding Collection <span class="dropdown-arrow">▼</span></a>
-            <div class="dropdown-menu">
-              <a href="#boho-chic" data-translate="dress">Dress</a>
-              <a href="#elegant-lace" data-translate="studio">Studio</a>
-              <a href="#classic-satin" data-translate="makeup">Makeup</a>
-              <a href="#modern-minimalist" data-translate="hanbok-ao-dai">Hanbok/Ao Dai</a>
-            </div>
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger-menu" aria-label="Toggle navigation menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+    <div class="header-right">
+      <nav class="main-nav">
+        <a href="pages/about.html" data-translate="about-us">About Us</a>
+        <a href="pages/services.html" data-translate="services">Services</a>
+        <div class="nav-dropdown">
+          <a href="#portfolio" class="dropdown-toggle" data-translate="wedding-collection">Wedding Collection <span class="dropdown-arrow">▼</span></a>
+          <div class="dropdown-menu">
+            <a href="#boho-chic" data-translate="dress">Dress</a>
+            <a href="#elegant-lace" data-translate="studio">Studio</a>
+            <a href="#classic-satin" data-translate="makeup">Makeup</a>
+            <a href="#modern-minimalist" data-translate="hanbok-ao-dai">Hanbok/Ao Dai</a>
           </div>
-          <a href="pages/gallery.html" data-translate="gallery">Gallery</a>
-          <a href="#contact" data-translate="contact-us">Contact Us</a>
-        </nav>
-        <div class="language-switcher">
-          <button class="lang-btn active" data-lang="en">EN</button>
-          <button class="lang-btn" data-lang="vn">VN</button>
-          <button class="lang-btn" data-lang="kr">KR</button>
+        </div>
+        <a href="pages/gallery.html" data-translate="gallery">Gallery</a>
+        <a href="#contact" data-translate="contact-us">Contact Us</a>
+      </nav>
+      <div class="language-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="vn">VN</button>
+        <button class="lang-btn" data-lang="kr">KR</button>
+      </div>
+    </div>
+  </header>
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <div class="mobile-nav-menu">
+      <div class="mobile-nav-header">
+        <div class="logo">
+          <img src="./assets/OY.png" alt="Onyou Bridal Logo" style="height: 60px; width: auto;">
+        </div>
+        <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close navigation menu">&times;</button>
+      </div>
+      <div class="mobile-nav-items">
+        <a href="pages/about.html" class="mobile-nav-item" data-translate="about-us">About Us</a>
+        <a href="pages/services.html" class="mobile-nav-item" data-translate="services">Services</a>
+        <div class="mobile-dropdown">
+          <button class="mobile-dropdown-toggle" data-translate="wedding-collection">Wedding Collection <span class="mobile-dropdown-arrow">▼</span></button>
+          <div class="mobile-dropdown-menu">
+            <a href="#boho-chic" class="mobile-dropdown-item" data-translate="dress">Dress</a>
+            <a href="#elegant-lace" class="mobile-dropdown-item" data-translate="studio">Studio</a>
+            <a href="#classic-satin" class="mobile-dropdown-item" data-translate="makeup">Makeup</a>
+            <a href="#modern-minimalist" class="mobile-dropdown-item" data-translate="hanbok-ao-dai">Hanbok/Ao Dai</a>
+          </div>
+        </div>
+        <a href="pages/gallery.html" class="mobile-nav-item" data-translate="gallery">Gallery</a>
+        <a href="#contact" class="mobile-nav-item" data-translate="contact-us">Contact Us</a>
+      </div>
+      <div class="mobile-language-switcher">
+        <h4 data-translate="language">Language</h4>
+        <div class="mobile-lang-buttons">
+          <button class="mobile-lang-btn active" data-lang="en">EN</button>
+          <button class="mobile-lang-btn" data-lang="vn">VN</button>
+          <button class="mobile-lang-btn" data-lang="kr">KR</button>
         </div>
       </div>
-  </header>
+    </div>
+  </div>
   <section class="hero-slogan">
       <div class="slogan-container">
         <h1 class="main-slogan" style="font-family: 'Beau Rivage', cursive; font-weight: 400; font-style: normal;">ONYOU</h1>
@@ -412,52 +452,32 @@
         });
       }
 
-      // Dropdown menu JS for mobile and accessibility
-      const navDropdown = document.querySelector('.nav-dropdown');
-      const dropdownToggle = document.querySelector('.dropdown-toggle');
-      const dropdownMenu = document.querySelector('.dropdown-menu');
-      
-      // Toggle dropdown on click/tap (mobile)
-      dropdownToggle.addEventListener('click', function(e) {
-        // Only toggle on mobile or if dropdown is not already open
-        const isOpen = dropdownMenu.style.display === 'block';
-        if (window.innerWidth <= 900) {
-          e.preventDefault();
-          dropdownMenu.style.display = isOpen ? 'none' : 'block';
-          dropdownToggle.setAttribute('aria-expanded', !isOpen);
-        }
-      });
-      // Close dropdown when clicking outside
-      document.addEventListener('click', function(e) {
-        if (window.innerWidth <= 900) {
-          if (!navDropdown.contains(e.target)) {
-            dropdownMenu.style.display = 'none';
-            dropdownToggle.setAttribute('aria-expanded', 'false');
-          }
-        }
-      });
-      // Keyboard accessibility
-      dropdownToggle.setAttribute('aria-haspopup', 'true');
-      dropdownToggle.setAttribute('aria-expanded', 'false');
-      dropdownToggle.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          dropdownToggle.click();
-        }
-      });
-      // Close dropdown on nav link click (mobile)
-      dropdownMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', function() {
-          if (window.innerWidth <= 900) {
-            dropdownMenu.style.display = 'none';
-            dropdownToggle.setAttribute('aria-expanded', 'false');
-          }
-        });
-             });
-     });
+      // Hamburger menu functionality
+      const hamburgerMenu = document.querySelector('.hamburger-menu');
+      const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+      const mobileNavClose = document.getElementById('mobileNavClose');
 
-     // Initialize language switcher
-     initLanguageSwitcher();
-   </script>
+      hamburgerMenu.addEventListener('click', function() {
+        mobileNavOverlay.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling behind the overlay
+      });
+
+      mobileNavClose.addEventListener('click', function() {
+        mobileNavOverlay.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      });
+
+      // Close mobile nav when clicking outside
+      mobileNavOverlay.addEventListener('click', function(e) {
+        if (e.target === mobileNavOverlay) {
+          mobileNavOverlay.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }
+      });
+
+      // Initialize language switcher
+      initLanguageSwitcher();
+    });
+  </script>
 </body>
 </html> 

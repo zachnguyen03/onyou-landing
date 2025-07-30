@@ -19,6 +19,12 @@
     <div class="header-left">
       <div class="logo"><a href="../index.html"><img src="../assets/OY.png" alt="Onyou Bridal Logo"></a></div>
     </div>
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger-menu" aria-label="Toggle navigation menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
     <div class="header-right">
       <nav class="main-nav">
         <a href="about.html" data-translate="about-us">About Us</a>
@@ -42,6 +48,40 @@
       </div>
     </div>
   </header>
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <div class="mobile-nav-menu">
+      <div class="mobile-nav-header">
+        <div class="logo">
+          <img src="../assets/OY.png" alt="Onyou Bridal Logo" style="height: 60px; width: auto;">
+        </div>
+        <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close navigation menu">&times;</button>
+      </div>
+      <div class="mobile-nav-items">
+        <a href="about.html" class="mobile-nav-item" data-translate="about-us">About Us</a>
+        <a href="services.html" class="mobile-nav-item" data-translate="services">Services</a>
+        <div class="mobile-dropdown">
+          <button class="mobile-dropdown-toggle" data-translate="wedding-collection">Wedding Collection <span class="mobile-dropdown-arrow">▼</span></button>
+          <div class="mobile-dropdown-menu">
+            <a href="wedding-dress.html" class="mobile-dropdown-item" data-translate="dress">Dress</a>
+            <a href="wedding-studio.html" class="mobile-dropdown-item" data-translate="studio">Studio</a>
+            <a href="wedding-makeup.html" class="mobile-dropdown-item" data-translate="makeup">Makeup</a>
+            <a href="wedding-aodai.html" class="mobile-dropdown-item" data-translate="hanbok-ao-dai">Hanbok/Ao Dai</a>
+          </div>
+        </div>
+        <a href="gallery.html" class="mobile-nav-item" data-translate="gallery">Gallery</a>
+        <a href="contact.html" class="mobile-nav-item" data-translate="contact-us">Contact Us</a>
+      </div>
+      <div class="mobile-language-switcher">
+        <h4 data-translate="language">Language</h4>
+        <div class="mobile-lang-buttons">
+          <button class="mobile-lang-btn active" data-lang="en">EN</button>
+          <button class="mobile-lang-btn" data-lang="vn">VN</button>
+          <button class="mobile-lang-btn" data-lang="kr">KR</button>
+        </div>
+      </div>
+    </div>
+  </div>
   
   <section class="hero-slogan">
     <div class="slogan-container">
@@ -115,5 +155,6 @@
     // Initialize language switcher
     initLanguageSwitcher();
   </script>
+  <script src="../assets/mobile-nav.js"></script>
 </body>
 </html>

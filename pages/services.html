@@ -13,14 +13,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap" rel="stylesheet">
   <script src="../assets/language-switcher.js"></script>
+  <script src="../assets/mobile-nav.js"></script>
 
 </head>
 <body>
   <header>
     <div class="header-left">
       <div class="logo"><a href="../index.html"><img src="../assets/OY.png" alt="Onyou Bridal Logo"></a></div>
-      <!-- <div class="header-subtitle">by nanapham</div> -->
     </div>
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger-menu" aria-label="Toggle navigation menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
     <div class="header-right">
       <nav class="main-nav">
         <a href="about.html" data-translate="about-us">About Us</a>
@@ -44,97 +50,303 @@
       </div>
     </div>
   </header>
-  <section class="hero-slogan">
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <div class="mobile-nav-menu">
+      <div class="mobile-nav-header">
+        <div class="logo">
+          <img src="../assets/OY.png" alt="Onyou Bridal Logo" style="height: 60px; width: auto;">
+        </div>
+        <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close navigation menu">&times;</button>
+      </div>
+      <div class="mobile-nav-items">
+        <a href="about.html" class="mobile-nav-item" data-translate="about-us">About Us</a>
+        <a href="services.html" class="mobile-nav-item" data-translate="services">Services</a>
+        <div class="mobile-dropdown">
+          <button class="mobile-dropdown-toggle" data-translate="wedding-collection">Wedding Collection <span class="mobile-dropdown-arrow">▼</span></button>
+          <div class="mobile-dropdown-menu">
+            <a href="wedding-dress.html" class="mobile-dropdown-item" data-translate="dress">Dress</a>
+            <a href="wedding-studio.html" class="mobile-dropdown-item" data-translate="studio">Studio</a>
+            <a href="wedding-makeup.html" class="mobile-dropdown-item" data-translate="makeup">Makeup</a>
+            <a href="wedding-aodai.html" class="mobile-dropdown-item" data-translate="hanbok-ao-dai">Hanbok/Ao Dai</a>
+          </div>
+        </div>
+        <a href="gallery.html" class="mobile-nav-item" data-translate="gallery">Gallery</a>
+        <a href="contact.html" class="mobile-nav-item" data-translate="contact-us">Contact Us</a>
+      </div>
+      <div class="mobile-language-switcher">
+        <h4 data-translate="language">Language</h4>
+        <div class="mobile-lang-buttons">
+          <button class="mobile-lang-btn active" data-lang="en">EN</button>
+          <button class="mobile-lang-btn" data-lang="vn">VN</button>
+          <button class="mobile-lang-btn" data-lang="kr">KR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <section class="hero-slogan">
       <div class="slogan-container">
         <h1 class="main-slogan" style="font-family: 'Beau Rivage', cursive; font-weight: 400; font-style: normal;">ONYOU</h1>
       <p class="slogan-subtitle" style="font-family: 'Parisienne', cursive; font-weight: 400; font-style: normal;">Make your big day your way</p>
     </div>
-  </section>
-  <section class="hero">
+  </section> -->
+  <!-- <section class="hero">
     <div class="hero-slider">
       <img id="heroSliderImage" src="../assets/wed1.jpg" alt="Showcase Dress" />
     </div>
-    <!-- <div class="hero-content">
+    <div class="hero-content">
       <h1>Find Your Dream Dress</h1>
       <p>Discover exclusive bridal gowns and unforgettable experiences at Onyou Bridal.</p>
       <a href="#showcase"><button class="cta-btn">View Collection</button></a> -->
     <!-- </div> -->
-  </section>
-  <section class="collection-showcase" id="portfolio">
-    <h2>Featured Collections</h2>
-    <div class="collection-nav-wrapper">
-      <button class="collection-arrow left" aria-label="Scroll left">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M18 6L10 14L18 22" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-      <div class="collection-scroll" id="scroller">
-        <div class="collection-card">
-          <img src="../assets/wed1.jpg" alt="Boho Chic Wedding Dress">
-          <div class="collection-overlay">
-            <span class="collection-title"></span>
-          </div>
-        </div>
-        <div class="collection-card">
-          <img src="../assets/wed2.jpg" alt="Elegant Lace Wedding Dress">
-          <div class="collection-overlay">
-            <span class="collection-title"></span>
-          </div>
-        </div>
-        <div class="collection-card">
-          <img src="../assets/wed3.jpg" alt="Classic Satin Wedding Dress">
-          <div class="collection-overlay">
-            <span class="collection-title"></span>
-          </div>
-        </div>
-        <div class="collection-card">
-          <img src="../assets/wed4.jpg" alt="Modern Minimalist Wedding Dress">
-          <div class="collection-overlay">
-            <span class="collection-title"></span>
-          </div>
-        </div>
-        <div class="collection-card">
-          <img src="../assets/wed5.jpg" alt="Timeless Elegance Wedding Dress">
-          <div class="collection-overlay">
-            <span class="collection-title"></span>
-          </div>
-        </div>
-        <div class="collection-card">
-          <img src="../assets/wed1.jpg" alt="Romantic Tulle Wedding Dress">
-          <div class="collection-overlay">
-            <span class="collection-title"></span>
-          </div>
-        </div>
+  <!-- </section> -->
+  
+  <!-- Services Section -->
+  <section class="services-section" id="services">
+    <div class="services-container">
+      <div class="services-header">
+        <h2 data-translate="our-services">Our Services</h2>
+        <p data-translate="services-intro">Discover our comprehensive bridal services designed to make your special day perfect in every detail.</p>
       </div>
-      <button class="collection-arrow right" aria-label="Scroll right">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 6L18 14L10 22" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-    </div>
-  </section>
-    
-    <!-- Dress Detail Modal -->
-    <div class="dress-modal" id="dressModal">
-      <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <div class="modal-body">
-          <div class="modal-image">
-            <img id="modalImage" src="" alt="">
+      
+      <div class="services-grid">
+        <!-- Wedding Dress Design & Fitting -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="../assets/wed1.jpg" alt="Wedding Dress Design & Fitting" loading="lazy">
+            <div class="service-overlay">
+              <span class="service-icon">👗</span>
+            </div>
           </div>
-          <div class="modal-info">
-            <h2 id="modalTitle"></h2>
-            <p id="modalDescription"></p>
-            <div class="modal-tags" id="modalTags"></div>
-            <div class="modal-actions">
-              <button class="btn-primary">Book Appointment</button>
-              <button class="btn-secondary">Add to Favorites</button>
+          <div class="service-content">
+            <div class="service-header">
+              <h3 data-translate="wedding-dress-design">Wedding Dress Design & Fitting</h3>
+              <div class="service-price">Starting from $1,200</div>
+            </div>
+            <p data-translate="wedding-dress-description">Custom-designed wedding dresses tailored to your unique style and body shape. Our expert designers work closely with you to create the perfect gown for your special day.</p>
+            <div class="service-features">
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="custom-design">Custom design consultation</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="multiple-fittings">Multiple fitting sessions</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="alterations-included">Alterations included</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="accessory-consultation">Accessory consultation</span>
+              </div>
+            </div>
+            <div class="service-actions">
+              <button class="service-btn primary" data-translate="book-consultation">Book Consultation</button>
+              <button class="service-btn secondary" data-translate="view-gallery">View Gallery</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bridal Makeup & Hair -->
+        <div class="service-card reverse">
+          <div class="service-image">
+            <img src="../assets/wed2.jpg" alt="Bridal Makeup & Hair" loading="lazy">
+            <div class="service-overlay">
+              <span class="service-icon">💄</span>
+            </div>
+          </div>
+          <div class="service-content">
+            <div class="service-header">
+              <h3 data-translate="bridal-makeup-hair">Bridal Makeup & Hair</h3>
+              <div class="service-price">Starting from $350</div>
+            </div>
+            <p data-translate="bridal-makeup-description">Professional bridal makeup and hairstyling services that enhance your natural beauty and ensure you look stunning throughout your special day.</p>
+            <div class="service-features">
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="trial-session">Trial session included</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="long-lasting">Long-lasting makeup</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="bridal-party">Bridal party services</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="touch-up-kit">Touch-up kit provided</span>
+              </div>
+            </div>
+            <div class="service-actions">
+              <button class="service-btn primary" data-translate="book-consultation">Book Consultation</button>
+              <button class="service-btn secondary" data-translate="view-portfolio">View Portfolio</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wedding Photography -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="../assets/wed3.jpg" alt="Wedding Photography" loading="lazy">
+            <div class="service-overlay">
+              <span class="service-icon">📸</span>
+            </div>
+          </div>
+          <div class="service-content">
+            <div class="service-header">
+              <h3 data-translate="wedding-photography">Wedding Photography</h3>
+              <div class="service-price">Starting from $800</div>
+            </div>
+            <p data-translate="wedding-photography-description">Capture every precious moment of your wedding day with our professional photography services. From engagement shoots to the big day, we preserve your memories beautifully.</p>
+            <div class="service-features">
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="engagement-shoot">Engagement shoot included</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="full-day-coverage">Full day coverage</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="edited-photos">Edited photos</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="online-gallery">Online gallery</span>
+              </div>
+            </div>
+            <div class="service-actions">
+              <button class="service-btn primary" data-translate="book-consultation">Book Consultation</button>
+              <button class="service-btn secondary" data-translate="view-portfolio">View Portfolio</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wedding Planning & Coordination -->
+        <div class="service-card reverse">
+          <div class="service-image">
+            <img src="../assets/wed4.jpg" alt="Wedding Planning & Coordination" loading="lazy">
+            <div class="service-overlay">
+              <span class="service-icon">📋</span>
+            </div>
+          </div>
+          <div class="service-content">
+            <div class="service-header">
+              <h3 data-translate="wedding-planning">Wedding Planning & Coordination</h3>
+              <div class="service-price">Starting from $1,500</div>
+            </div>
+            <p data-translate="wedding-planning-description">Comprehensive wedding planning and day-of coordination services to ensure your wedding day runs smoothly and stress-free.</p>
+            <div class="service-features">
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="vendor-coordination">Vendor coordination</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="timeline-management">Timeline management</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="budget-planning">Budget planning</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="day-coordination">Day-of coordination</span>
+              </div>
+            </div>
+            <div class="service-actions">
+              <button class="service-btn primary" data-translate="book-consultation">Book Consultation</button>
+              <button class="service-btn secondary" data-translate="view-packages">View Packages</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bridal Accessories -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="../assets/wed5.jpg" alt="Bridal Accessories" loading="lazy">
+            <div class="service-overlay">
+              <span class="service-icon">💎</span>
+            </div>
+          </div>
+          <div class="service-content">
+            <div class="service-header">
+              <h3 data-translate="bridal-accessories">Bridal Accessories</h3>
+              <div class="service-price">Starting from $200</div>
+            </div>
+            <p data-translate="bridal-accessories-description">Complete your bridal look with our curated collection of veils, jewelry, shoes, and other accessories that complement your wedding dress perfectly.</p>
+            <div class="service-features">
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="custom-veils">Custom veils</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="jewelry-selection">Jewelry selection</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="shoe-consultation">Shoe consultation</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="accessory-packages">Accessory packages</span>
+              </div>
+            </div>
+            <div class="service-actions">
+              <button class="service-btn primary" data-translate="book-consultation">Book Consultation</button>
+              <button class="service-btn secondary" data-translate="view-collection">View Collection</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cultural Wedding Attire -->
+        <div class="service-card reverse">
+          <div class="service-image">
+            <img src="../assets/wed1.jpg" alt="Cultural Wedding Attire" loading="lazy">
+            <div class="service-overlay">
+              <span class="service-icon">🏮</span>
+            </div>
+          </div>
+          <div class="service-content">
+            <div class="service-header">
+              <h3 data-translate="cultural-wedding-attire">Cultural Wedding Attire</h3>
+              <div class="service-price">Starting from $800</div>
+            </div>
+            <p data-translate="cultural-attire-description">Honor your heritage with our specialized cultural wedding attire services, including traditional Vietnamese ao dai, Korean hanbok, and other cultural garments.</p>
+            <div class="service-features">
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="traditional-designs">Traditional designs</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="modern-fusion">Modern fusion styles</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="cultural-consultation">Cultural consultation</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">✓</span>
+                <span data-translate="family-outfits">Family outfit coordination</span>
+              </div>
+            </div>
+            <div class="service-actions">
+              <button class="service-btn primary" data-translate="book-consultation">Book Consultation</button>
+              <button class="service-btn secondary" data-translate="view-gallery">View Gallery</button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
   <section class="about" id="about">
     <h2>Why ONYOU?</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus mattis libero, sodales dictum elit aliquet vel. Integer felis orci, accumsan eget auctor ut, semper sit amet augue. Vestibulum sed consectetur risus, eget egestas augue. Proin odio velit, tincidunt eu mauris et, blandit convallis nunc. Sed quis lectus eget massa ultrices mattis. Donec sed placerat lacus. Etiam ut finibus ipsum, vitae imperdiet quam.</p>
@@ -222,6 +434,22 @@
   </footer>
 
   <script>
+    // Service button functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      // Service card hover effects
+      const serviceCards = document.querySelectorAll('.service-card');
+      
+      serviceCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+          this.style.transform = 'translateY(-8px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateY(0)';
+        });
+      });
+    });
+
     // Dress card interaction functionality
     document.addEventListener('DOMContentLoaded', function() {
       // Hero slider animation
