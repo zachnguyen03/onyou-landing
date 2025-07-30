@@ -25,9 +25,16 @@
         <a href="contact.html" data-translate="contact-us">Contact Us</a>
       </nav>
       <div class="language-switcher">
-        <button class="lang-btn active" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="vn">VN</button>
-        <button class="lang-btn" data-lang="kr">KR</button>
+        <div class="lang-dropdown" tabindex="0">
+          <button class="lang-dropdown-btn" aria-label="Change language">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" style="vertical-align: middle;"><circle cx="11" cy="11" r="10" stroke="#d97706" stroke-width="2"/><path d="M1 11h20M11 1c2.5 2.5 4 6.5 4 10s-1.5 7.5-4 10c-2.5-2.5-4-6.5-4-10s1.5-7.5 4-10z" stroke="#d97706" stroke-width="2" fill="none"/></svg>
+          </button>
+          <div class="lang-dropdown-menu">
+            <button class="lang-dropdown-item" data-lang="vn"><span class="lang-dropdown-flag">🇻🇳</span>VN</button>
+            <button class="lang-dropdown-item" data-lang="en"><span class="lang-dropdown-flag">🇬🇧</span>EN</button>
+            <button class="lang-dropdown-item" data-lang="kr"><span class="lang-dropdown-flag">🇰🇷</span>KR</button>
+          </div>
+        </div>
       </div>
     </div>
   </header>
