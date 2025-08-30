@@ -13,6 +13,18 @@ const translations = {
     'contact-us': 'Contact Us',
     'language': 'Language',
     
+    // Main Content
+    'why-onyou': 'Why ONYOU?',
+    'exclusive': 'Exclusive',
+    'hand-tailored': 'Hand-tailored',
+    'memorable': 'Memorable',
+    'quick-consultation': 'QUICK CONSULTATION',
+    'your-name': 'Your Name',
+    'your-email': 'Your Email',
+    'your-message': 'Your Message',
+    'send-message': 'Send Message',
+    'featured-collections': 'Featured Collections',
+    
     // Gallery
     'wedding-dress-gallery': 'Wedding Dress Gallery',
     'gallery-intro': 'Explore our stunning collection of handcrafted wedding dresses, each designed to make your special day unforgettable.',
@@ -45,31 +57,43 @@ const translations = {
     'privacy-policy': 'Privacy Policy',
     'terms-of-use': 'Terms of Use',
     'accessibility': 'Accessibility',
-    'copyright': '© 2024 Onyou Bridal. All rights reserved.'
+    'copyright': '© 2025 Onyou Bridal. All rights reserved.'
   },
   vn: {
     // Navigation
     'about-us': 'Về Chúng Tôi',
     'services': 'Dịch Vụ',
-    'wedding-collection': 'Bộ Sưu Tập Cưới',
-    'dress': 'Váy',
+    'wedding-collection': 'Bộ Sưu Tập',
+    'dress': 'Váy Cưới',
     'studio': 'Studio',
-    'makeup': 'Trang Điểm',
+    'makeup': 'Makeup',
     'hanbok-ao-dai': 'Hanbok/Áo Dài',
-    'gallery': 'Thư Viện',
+    'gallery': 'Gallery',
     'contact-us': 'Liên Hệ',
     'language': 'Ngôn Ngữ',
     
+    // Main Content
+    'why-onyou': 'Tại Sao ONYOU?',
+    'exclusive': 'Độc Quyền',
+    'hand-tailored': 'May Thủ Công',
+    'memorable': 'Đáng Nhớ',
+    'quick-consultation': 'TƯ VẤN NHANH',
+    'your-name': 'Tên Của Bạn',
+    'your-email': 'Email Của Bạn',
+    'your-message': 'Tin Nhắn Của Bạn',
+    'send-message': 'Gửi Tin Nhắn',
+    'featured-collections': 'Bộ Sưu Tập Nổi Bật',
+    
     // Gallery
-    'wedding-dress-gallery': 'Thư Viện Váy Cưới',
+    'wedding-dress-gallery': 'Bộ Sưu Tập Váy Cưới',
     'gallery-intro': 'Khám phá bộ sưu tập váy cưới thủ công tuyệt đẹp của chúng tôi, mỗi chiếc được thiết kế để làm cho ngày đặc biệt của bạn khó quên.',
-    'all-dresses': 'Tất Cả Váy',
+    'all-dresses': 'Tất Cả Váy Cưới',
     'style-1': 'Phong Cách 1',
     'style-2': 'Phong Cách 2',
     'style-3': 'Phong Cách 3',
     'style-4': 'Phong Cách 4',
     'style-5': 'Phong Cách 5',
-    'load-more-dresses': 'Xem Thêm Váy',
+    'load-more-dresses': 'Xem Thêm',
     
     // Services
     'our-services': 'Dịch Vụ Của Chúng Tôi',
@@ -92,7 +116,7 @@ const translations = {
     'privacy-policy': 'Chính Sách Bảo Mật',
     'terms-of-use': 'Điều Khoản Sử Dụng',
     'accessibility': 'Khả Năng Tiếp Cận',
-    'copyright': '© 2024 Onyou Bridal. Tất cả quyền được bảo lưu.'
+    'copyright': '© 2025 Onyou Bridal'
   },
   kr: {
     // Navigation
@@ -106,6 +130,18 @@ const translations = {
     'gallery': '갤러리',
     'contact-us': '연락처',
     'language': '언어',
+    
+    // Main Content
+    'why-onyou': '왜 ONYOU인가요?',
+    'exclusive': '독점',
+    'hand-tailored': '핸드메이드',
+    'memorable': '기억에 남는',
+    'quick-consultation': '빠른 상담',
+    'your-name': '이름',
+    'your-email': '이메일',
+    'your-message': '메시지',
+    'send-message': '메시지 보내기',
+    'featured-collections': '주요 컬렉션',
     
     // Gallery
     'wedding-dress-gallery': '웨딩 드레스 갤러리',

@@ -1,3 +1,6 @@
+/* Import Futura font */
+@import url('https://fonts.googleapis.com/css2?family=Futura+PT:wght@400;500;600;700&display=swap');
+
 :root {
   --primary: #fff;
   --accent: #fdf2f8;
@@ -6,8 +9,8 @@
   --text: #1f2937;
   --warm-text: #000;
   --warm-bg: #fef3c7;
-  --serif: 'Cormorant Garamond', serif;
-  --sans: 'Inter', sans-serif;
+  --serif: 'Futura PT', 'Futura', sans-serif;
+  --sans: 'Futura PT', 'Futura', sans-serif;
 }
 
 * { 
@@ -16,8 +19,13 @@
   padding: 0; 
 }
 
+/* Ensure all headings use Futura font */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Futura PT', 'Futura', sans-serif;
+}
+
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Futura PT', 'Futura', sans-serif;
   /* background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80') center/cover fixed no-repeat; */
   color: var(--text);
   line-height: 1.6;
@@ -78,7 +86,7 @@ header {
 }
 
 .header-subtitle {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Futura PT', 'Futura', sans-serif;
   font-size: 0.9rem;
   color: var(--warm-text);
   letter-spacing: 2px;
@@ -116,7 +124,7 @@ header {
 }
 
 .slogan-subtitle {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Futura PT', 'Futura', sans-serif;
   font-size: 2.3rem;
   color: var(--warm-text);
   line-height: 1.6;
@@ -168,7 +176,7 @@ header {
   font-size: 1.1rem;
   border-radius: 30px;
   cursor: pointer;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Futura PT', 'Futura', sans-serif;
   font-weight: 500;
   box-shadow: 0 2px 8px rgba(201,161,107,0.1);
   transition: background-color 0.2s;
@@ -437,7 +445,7 @@ header {
   padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 25px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Futura PT', 'Futura', sans-serif;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -717,7 +725,7 @@ header {
   border: 1px solid var(--warm-gold);
   border-radius: 8px;
   font-size: 1rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Futura PT', 'Futura', sans-serif;
   resize: none;
 }
 
@@ -729,7 +737,7 @@ header {
   font-size: 1.1rem;
   border-radius: 30px;
   cursor: pointer;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Futura PT', 'Futura', sans-serif;
   font-weight: 500;
   transition: background-color 0.2s;
 }
@@ -752,7 +760,7 @@ footer {
 .main-nav {
   display: flex;
   gap: 1.2rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Futura PT', 'Futura', sans-serif;
   font-size: 1rem;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -791,7 +799,7 @@ footer {
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Futura PT', 'Futura', sans-serif;
   min-width: 32px;
   text-align: center;
 }
@@ -911,7 +919,7 @@ footer {
   padding: 1rem 0;
   color: var(--text);
   text-decoration: none;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Futura PT', 'Futura', sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
   border-bottom: 1px solid rgba(217, 119, 6, 0.05);
@@ -935,7 +943,7 @@ footer {
   border: none;
   padding: 1rem 0;
   color: var(--text);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Futura PT', 'Futura', sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
   cursor: pointer;
@@ -972,7 +980,7 @@ footer {
   padding: 0.8rem 1.5rem;
   color: var(--text);
   text-decoration: none;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Futura PT', 'Futura', sans-serif;
   font-size: 1rem;
   transition: color 0.2s, background-color 0.2s;
 }
@@ -989,7 +997,7 @@ footer {
 }
 
 .mobile-language-switcher h4 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Futura PT', 'Futura', sans-serif;
   font-size: 1rem;
   color: var(--text);
   margin-bottom: 1rem;
@@ -1011,7 +1019,7 @@ footer {
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Futura PT', 'Futura', sans-serif;
 }
 
 .mobile-lang-btn:hover,
@@ -1283,8 +1291,7 @@ footer {
   background: rgb(255, 255, 255);
   color: var(--warm-text);
   padding: 3rem 0 0 0;
-  font-family: 'Inter', sans-serif;
-  border-top: 1px solid rgba(217,119,6,0.08);
+  font-family: 'Futura PT', 'Futura', sans-serif;
   margin-top: 3rem;
   content-visibility: auto;
   contain-intrinsic-size: 400px;
@@ -1527,7 +1534,7 @@ footer {
   color: var(--text);
   text-decoration: none;
   font-size: 1rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Futura PT', 'Futura', sans-serif;
   border-radius: 8px;
   transition: background 0.2s, color 0.2s;
 }
@@ -1732,7 +1739,7 @@ footer {
 }
 
 .service-price {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Futura PT', 'Futura', sans-serif;
   font-size: 1.1rem;
   color: var(--warm-text);
   font-weight: 600;
@@ -1766,7 +1773,7 @@ footer {
 }
 
 .feature-item span:last-child {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Futura PT', 'Futura', sans-serif;
   font-size: 1rem;
   color: var(--warm-text);
   font-weight: 500;
@@ -1782,7 +1789,7 @@ footer {
   padding: 0.9rem 1.8rem;
   border: none;
   border-radius: 30px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Futura PT', 'Futura', sans-serif;
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
@@ -2028,7 +2035,7 @@ footer {
   color: var(--gold);
   padding: 0.8rem 1.5rem;
   border-radius: 30px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Futura PT', 'Futura', sans-serif;
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
@@ -2140,7 +2147,7 @@ footer {
   border: none;
   padding: 0.8rem 1.5rem;
   border-radius: 25px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Futura PT', 'Futura', sans-serif;
   font-weight: 600;
   font-size: 0.9rem;
   cursor: pointer;
@@ -2166,7 +2173,7 @@ footer {
   border: none;
   padding: 1rem 2.5rem;
   border-radius: 30px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Futura PT', 'Futura', sans-serif;
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
